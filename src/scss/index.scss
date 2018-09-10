@@ -1,0 +1,112 @@
+* {
+    font-family: 'Roboto', sans-serif;
+    box-sizing: border-box;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+}
+
+.container {
+    width: 100%;
+
+    header {
+        height: 100px;
+        line-height: 100px;
+        margin-bottom: 20px;
+        text-align: center;
+        background-color: #ccc;
+        
+        h1 {
+            color: black;
+            text-transform: uppercase;
+            margin: 0;
+        }
+    }
+
+    .singleCurrency {
+        width: 50%;
+        height: 50px;
+        border: 1px solid #ccc;
+        border-top: none;
+        
+        &:first-of-type {
+            border: 1px solid #ccc;
+        }
+        
+        &:last-of-type {
+            border-top: none;
+        }
+        
+        line-height: 50px;
+        margin: 0 auto;
+
+        a {
+            span {
+                font-size: 18px;
+
+                &:first-of-type {
+                    margin: 0 14px;
+                }
+                
+                &:last-of-type {
+                    margin-left: 5px;
+                }
+            }
+        }
+
+        @media screen and (max-width: 768px) {
+            width: 90%;
+        }
+    }
+
+    .currencyDetail {
+        width: 50%;
+        height: 50px;
+        margin: 0 auto;
+        @media screen and (max-width: 768px) {
+            width: 90%;
+        }
+
+        select {
+            width: 80px;
+            height: 30px;
+            display: block;
+        }
+
+        .detailWrap {
+            width: 33.33%;
+            display: inline-block;
+            
+            p {
+                &:first-of-type {
+                    font-weight: 700;
+                }
+                &:last-of-type {
+                    font-size: 14px;
+                }
+            }
+        }
+
+        button {
+            width: 200px;
+            height: 30px;
+            color: white;
+            background-color: #ccc;
+            border: none;
+        }
+    }
+}
+
+.loading {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+a, a:active {
+    text-decoration: none;
+    color: rgb(78, 54, 54);
+}

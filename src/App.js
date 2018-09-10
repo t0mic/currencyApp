@@ -1,19 +1,19 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
+import Layout from './components/layout';
+import { Switch, Route } from 'react-router-dom';
+import Currencies from './containers/Currencies';
+import CurrencyDetail from './containers/CurrencyDetail';
+
 
 class App extends Component {
   render() {
     return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h1 className="App-title">Welcome to React</h1>
-        </header>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
-      </div>
+      <Layout>
+        <Switch>
+          <Route path="/" exact component={Currencies} />
+          <Route path="/:currencyName" component={CurrencyDetail} />
+        </Switch>
+      </Layout>
     );
   }
 }
